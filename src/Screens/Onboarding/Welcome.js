@@ -3,6 +3,7 @@ import React from "react";
 import Onboarding from "react-native-onboarding-swiper";
 import Lottie from "lottie-react-native";
 import { useNavigation } from "@react-navigation/native";
+import { StatusBar } from 'expo-status-bar';
 //import { setItem } from "../../utils/asyncStorage";
 
 const { width, height } = Dimensions.get("window");
@@ -16,6 +17,7 @@ export default function Welcome() {
   };
   return (
     <View style={styles.container}>
+      <StatusBar/>
       <Onboarding
         onDone={handleDone}
         onSkip={handleDone}
@@ -47,7 +49,7 @@ export default function Welcome() {
                   autoPlay
                   loop
                 />
-                <Image source={require("../../../assets/images/emotional.png")} style={styles.image}/>
+                <Image source={require("../../../assets/images/Mind.png")} style={styles.image}/>
               </View>
             ),
             title: "Your Path to Emotional Wellness",

@@ -10,6 +10,7 @@ import Home from "../Screens/Home/Home";
 import Sound from "../Screens/Sound/Sound";
 import Community from "../Screens/Community/Community";
 import Settings from "../Screens/Settings/Settings";
+import { StatusBar } from 'expo-status-bar';
 
 //ICONS
 import { Foundation, Ionicons } from "@expo/vector-icons";

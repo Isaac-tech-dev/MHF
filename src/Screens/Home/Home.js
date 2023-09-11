@@ -1,16 +1,17 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
-import { AntDesign } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { StatusBar } from "expo-status-bar";
 
 export default function Home() {
   const navigation = useNavigation();
 
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar />
       <View style={styles.containerText}>
-        <AntDesign name="menu-fold" size={24} color="black" />
+        <Image source={require('../../../assets/Icons/Hamburger.png')}/>
         <Text>Hello</Text>
       </View>
       <Text style={styles.text}>
@@ -131,26 +132,74 @@ export default function Home() {
         <Text style={{ fontSize: 25, fontWeight: "400" }}>
           Peer Group Meetup
         </Text>
-        <View style={{flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <View style={{ flex: 1 }}>
-            <Text>
+            <Text style={{ fontWeight: "300", fontSize: 15, marginBottom: 10 }}>
               Let’s open up to the thing that matters amoung the people{" "}
             </Text>
-            <Text>Peer Group Meetup</Text>
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+              <Text
+                style={{ color: "#EF5DA8", fontWeight: "700", fontSize: 20 }}
+              >
+                Join Now
+              </Text>
+              <Image
+                source={require("../../../assets/Icons/play.png")}
+                style={{ marginLeft: 10 }}
+              />
+            </View>
           </View>
           <View style={{ flex: 1 }}>
             <Image source={require("../../../assets/Icons/Meetup.png")} />
           </View>
         </View>
       </View>
+
       <View
         style={{
-          backgroundColor: "#F09E54",
+          backgroundColor: "rgba(240, 158, 84, 0.3)",
           height: 157,
           width: "100%",
           borderRadius: 20,
+          marginBottom: 40,
+          padding: 20,
         }}
-      ></View>
+      >
+        <Text style={{ fontSize: 25, fontWeight: "400" }}>Meditation</Text>
+        <View
+          style={{
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <View style={{ flex: 1 }}>
+            <Text style={{ fontWeight: "300", fontSize: 15, marginBottom: 10 }}>
+              Aura is the most important thing that matters to you.join us on
+            </Text>
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+              <Text
+                style={{ color: "#F09A59", fontWeight: "700", fontSize: 20 }}
+              >
+                06:00 PM
+              </Text>
+              <Image
+                source={require("../../../assets/Icons/Time.png")}
+                style={{ marginLeft: 10 }}
+              />
+            </View>
+          </View>
+          <View style={{ flex: 1 }}>
+            <Image source={require("../../../assets/Icons/Meditation.png")} />
+          </View>
+        </View>
+      </View>
     </SafeAreaView>
   );
 }
@@ -159,7 +208,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    paddingHorizontal: 20,
+    paddingHorizontal: 22,
   },
   containerText: {
     flexDirection: "row",

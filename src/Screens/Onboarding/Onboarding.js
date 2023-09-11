@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
+import { StatusBar } from 'expo-status-bar';
 
 export default function Onboarding() {
 
@@ -11,6 +12,7 @@ export default function Onboarding() {
   }
   return (
     <View style={styles.container}>
+      <StatusBar/>
 
       <View style={styles.containerText}>
         <Text style={styles.text}>Its Ok Not To Be OKAY !!</Text>
